@@ -40,17 +40,7 @@ const myconst=10;
 //myconst++;
 console.log(myconst);
 console.log(number*anotherNumber);
-callElectrician();
-console.log(sum(2,4));
 
-function callElectrician(){
-    console.log("shows up to your place");
-    console.log("install a TV");
-}
-
-function sum( x, y){
-return x+y;
-}
 
 //operators: mostly simialar to java, some are extras as below:
 /*          **  Exponentiation  	
@@ -60,6 +50,4 @@ return x+y;
 //Adding two numbers, will return the sum, but adding a number and a string will return a concatenated string:
 console.log(typeof(10)); //number
 
-class User{}
-const user= new User();
-console.log(user instanceof(User)); //true
+
