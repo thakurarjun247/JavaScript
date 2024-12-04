@@ -4,13 +4,18 @@
         <script>
             function changeInnerHTML(){
                 document.getElementById("first").innerHTML="inner html changed by JS";
+                //can be done this way as well
+                const element=document.getElementById("first");
+                element.innerHTML="again, inner html changed by JS ";
             }
         </script>
     </head>
     <body>
         <p id="first">first id</p>
         <button onclick="changeInnerHTML()">change HTML</button>
-        <button onclick="window.close()">close the window</button>
+
+       <!--  javascript can directly write to html using document.write() -->
+        <script>document.write("js can write using document . write() even dynamic content such as date: "+Date())</script>
 
     </body>
 </html>

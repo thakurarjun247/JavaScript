@@ -1,4 +1,5 @@
 console.log(Date());
+console.log("test");
 //JavaScript Variables can be declared in 4 ways:
 /*
 Automatically
