@@ -1,0 +1,6 @@
+Create simple html file
+
+create a text area
+create a button
+inner html
+function call on button click

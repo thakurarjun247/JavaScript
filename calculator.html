@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>calculator</title>
+    </head>
+    <body>
+        <table>
+            <tr> <textarea  id="result"></textarea></tr>
+            <tr>
+                <td><button id="one" onclick="addToTextArea('1')">1</button></td>
+                <td><button id="two"  onclick="addToTextArea('2')" >2</button></td>
+                <td>  <button id="three" onclick="addToTextArea('3')">3</button></td>
+            </tr>
+
+            <tr>
+                <td><button id="four" onclick="addToTextArea('4')">4</button></td>
+                <td> <button id="five" onclick="addToTextArea('5')">5</button></td>
+                <td>   <button id="six" onclick="addToTextArea('6')">6</button></td>
+            </tr>
+            <tr>
+                <td><button id="seven" onclick="addToTextArea('7')">7</button></td>
+                <td><button id="eight"  onclick="addToTextArea('8')">8</button></td>
+                <td><button id="nine" onclick="addToTextArea('9')">9</button></td>
+              </tr>
+              <tr>
+                <td><button id="add" onclick="addToTextArea('+')">+</button></td>
+                
+                <td><button id="subtract" onclick="addToTextArea('-')">-</button></td>
+              </tr>
+              <tr>
+                <!-- <td>
+                    <button id="clickme" onclick="clickme();">clickme</button>
+                </td> -->
+                <td>        <button id="clearme" onclick="clearme()">clearme</button>
+                </td>
+                <td>
+                    <button id="calculate" onclick="calculate();">calculate</button>
+                </td>
+              </tr>
+        </table>
+        
+       
+        <script>
+            function addToTextArea(x){
+                let resultText=document.getElementById("result");
+                resultText.innerHTML=resultText.innerHTML+x;
+            }
+            function clearme(){
+                document.getElementById("result").innerHTML=""
+            }
+            function calculate(){
+                let input=document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML=eval(input);
+            }
+            // function clickme(){
+            //     document.getElementById("result").innerHTML="button clicked."
+            // }
+        </script>
+    </body>
+</html>
