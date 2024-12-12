@@ -1,3 +1,15 @@
+const t=true;
+const f=false;
+console.log(t && t);
+console.log(t && f);
+console.log(t || t);
+console.log(t || f);
+
+my_undefined=10;
+let my_null=null;
+console.log(my_undefined);
+console.log(my_null);
+
 console.log(Date());
 console.log("test");
 //JavaScript Variables can be declared in 4 ways:
@@ -16,18 +28,14 @@ The var keyword should only be used in code written for older browsers.
 Only use var if you MUST support old browsers.
 
 The let and const keywords were added to JavaScript in 2015.
-When to Use Which:
-
-Use let in most cases (similar to java variables)
+Use let in most cases (similar to java/C variables)
 Variables declared with let have Block Scope
 Variables declared with let must be Declared before use
 Variables declared with let cannot be Redeclared in the same scope
 
 const
 Variables defined with const cannot be Redeclared
-
 Variables defined with const cannot be Reassigned
-
 Variables defined with const have Block Scope
 
 */
