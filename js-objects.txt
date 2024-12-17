@@ -1,0 +1,1398 @@
+JS Objects
+Java Script Object:
+===================
+
+--inside a variable we can store a simple information like:
+
+example:
+
+let name = "Ram";
+let age = 26;
+let gender = "male";
+let address = "delhi";
+let married = false;
+
+
+--array is a data-structure using which we can store multiple values inside a variable.
+
+
+example:
+
+let details = ["Ram",26,"male","delhi",false];
+
+--the above array will not explain about any valid information.
+
+
+--to hold the meaningfull information, there is another data-structure is available inside the Java-script, called an Object.
+
+--In Java-script object, we hold the information in the form of kay-value pair.
+
+--Java-script objects are also called as "key-value pair" or "dictionary".
+
+dictionary:
+
+key---value
+university--- its meaning
+
+example: if we see any realtime form page in a webpage:
+
+--the form also will be in the form of key-value pair.
+
+name: "Ram"
+age: 26
+address: "delhi"
+gender: "male"
+email: "ram@gmail.com"
+hobbie: "coding"
+
+
+Java script object syntax:
+--------------------------
+
+let x = {key: value, key: value,...};
+
+let y = {}; //empty object
+
+let z= []; //empty array
+
+
+
+
+console.log(y);
+console.log(z);
+
+
+example:
+
+let user = {name: "Ram", age: 26, address: "delhi", gender: "male", married: false};
+
+
+//or
+
+let user = {
+
+name: "Ram",
+age: 26,
+address: "delhi",
+gender: "male",
+married: false
+
+};
+
+
+console.log(user);
+
+
+--here key should not be duplicate, if we define the duplicate key, then it will override the previous value.
+
+example:
+
+
+let x= {a: 10, b: 20, c: 30, a: 40};
+
+console.log(a); // {a: 40, b:20, c: 30};
+
+
+--the value of an object can be any type like: number, string, boolean, array, null, undefined, function, another-object.
+
+
+example:
+
+
+let user = {
+
+roll: 101,
+name: "Ram",
+marks: 500,
+hobbies: ["coding", "playing"],
+married: false,
+salary: null,
+spouse: undefined 
+
+}
+
+
+console.log(user);
+
+
+Note: the key of an object should always be in a string format, where double quote is optional.
+
+example
+
+
+let user = {
+
+"roll": 101,
+"name": "Ram",
+"marks": 500,
+"hobbies": ["coding", "playing"],
+"married": false,
+"salary": null,
+"spouse": undefined 
+
+}
+
+
+console.log(user);
+ 
+
+
+Q/- WAP to create an object of student with the following details and print the object.
+
+
+roll, name, age, address, gender, hobbies, email, phone, smoking
+
+
+ 
+Accessing the information from an object:
+-----------------------------------------
+
+--to access any information from an object, we have 2 ways:
+
+1. using dot notation
+2. using bracket notation
+
+example:
+
+
+let user = {
+
+roll: 101,
+name: "Ram",
+marks: 500,
+hobbies: ["coding", "playing"],
+married: false,
+salary: null,
+spouse: undefined 
+
+}
+
+
+//accessing the name of the user:
+
+using dot notation:
+------------------
+
+let n = user.name;
+console.log("The name of user is:",n);
+
+//or
+
+console.log("The name of user is:",user.name);
+
+console.log("The age of user is:",user.age);
+
+console.log("The Hobbies of user is:",user.hobbies);
+
+//or
+
+console.log("The Hobbies of user is:");
+
+for(let i=0;i<user.hobbies.length;i++)
+{
+	console.log(user.hobbies[i]);
+}
+
+
+using bracket notation:
+-----------------------
+
+
+let n = user["name"]; // bracket notation
+let n = user.name; // dot notation
+
+console.log("The name of user is:", n);
+
+//or
+
+console.log("The name of user is:",user["name"]);
+
+console.log("The age of user is:",user["age"]);
+
+console.log("The Hobbies of user is:",user["hobbies"]);
+
+
+//or
+
+
+
+console.log("The Hobbies of user is:");
+
+for(let i=0;i<user["hobbies"].length;i++)
+{
+	console.log(user["hobbies"][i]);
+}
+
+
+
+
+difference between dot and bracket notation:
+---------------------------------------------
+
+--using bracket notation we can access any values from an object by the help of any variable also.
+
+example:
+
+let field = "marks"; // here we can assign any key dynamically for which we need the information.
+
+console.log(user[field]);
+
+--but we can not use this approach using dot notation.
+
+example:
+
+console.log(user.field); // undefined
+
+
+
+adding a new entry inside an existing object.
+=============================================
+
+
+let user = {
+
+roll: 101,
+name: "Ram",
+marks: 500,
+hobbies: ["coding", "playing"],
+married: false,
+salary: null,
+spouse: undefined 
+
+}
+
+
+
+
+using dot notation:
+-------------------
+
+user.age=25;
+console.log(user);
+
+using bracket notation:
+-----------------------
+
+user["email"]="ram@gmail.com";
+console.log(user);
+
+
+
+update any existing entry inside an object.
+===========================================
+
+
+let user = {
+
+roll: 101,
+name: "Ram",
+marks: 500,
+hobbies: ["coding", "playing"],
+married: false,
+salary: null,
+spouse: undefined 
+
+}
+
+
+
+
+using dot notation:
+-------------------
+
+user.salary=5000;
+console.log(user);
+
+using bracket notation:
+-----------------------
+
+user["married"]= true;
+console.log(user);
+
+
+
+delete an entry from an existing object:
+========================================
+
+
+
+let user = {
+
+roll: 101,
+name: "Ram",
+marks: 500,
+hobbies: ["coding", "playing"],
+married: false,
+salary: null,
+spouse: undefined 
+
+}
+
+
+
+using dot notation:
+-------------------
+
+delete user.spouse;
+console.log(user);
+
+using bracket notation:
+-----------------------
+
+delete user["married"];
+console.log(user);
+
+
+
+Nested Object:
+===============
+
+let user = {
+
+roll: 100,
+name: "Ramesh",
+age: 25,
+marks: 500,
+address: {
+	 city: "Indore",
+	 state: "MP",
+	 country: "India",
+	 pin: 576576
+	},
+email: "ramesh@gmail.com"
+
+};
+
+
+
+--In Java-script an object is a key-value pair, where value can be of any type, it can be another object as well.
+
+example:
+
+let user = {
+
+roll: 100,
+name: "Ramesh",
+age: 25,
+marks: 500,
+address: {
+	 city: "Indore",
+	 state: "MP",
+	 country: "India",
+	 pin: 576576
+	},
+email: "ramesh@gmail.com"
+
+};
+
+
+
+console.log(user.name);
+console.log(user["name"]);
+
+
+console.log(user.address);
+console.log(user["address"]);
+
+console.log(user.address.city);
+console.log(user["address"]["city"]);
+
+
+
+accessing each entries from an object:
+======================================
+
+
+Note: Unlike array, Java-script object does not follow index based position of entries, the entries can be in random order.
+
+--unlike array there is no any "length" property available inside a Java-script object.
+
+--array syntax is [] where as Java-script object syntax is {}.
+
+ 
+--In order to access each entries from an Object one by one we need to make use of a special type of for-loop called: 
+"for-in" loop.
+
+
+example:
+
+
+let user = {
+
+roll: 101,
+name: "Ram",
+marks: 500,
+hobbies: ["coding", "playing"],
+married: false,
+salary: null,
+spouse: undefined 
+
+}
+
+
+for(let i in user) // here each key from the obj will be loaded inside
+{		   // variable i.
+	console.log(i);
+}
+
+
+//or
+
+for(let i in user)
+{
+	console.log(i,"==========",user[i]);
+}
+
+
+Example:
+
+
+
+let user = {
+
+roll: 10,
+name: "Ram",
+email: "ram@gmail.com",
+gender: "male",
+address: {
+
+	city: "indore",
+	state: "MP",
+	country: "India",
+	pin: 423232
+
+}
+
+};
+
+
+
+for(let i in user.address){
+
+console.log(i,"  ",user.address[i]);
+
+
+}
+
+
+
+Note: null, undefined, 0, empty string(""),   all having a boolean value false. but an empty object({}) and empty array([]), has the true value.
+
+example:
+
+
+let x= true; // "", 0, null, undefined, {},[]
+
+if(x){
+console.log("Welcome");
+}
+else{
+console.log("hello");
+}
+
+
+
+
+Q/- print the frequency of each elements inside an array:
+
+ex:
+
+["A","B","A","A","C","B"];
+
+output:
+
+A 3
+B 2
+C 1
+
+hint:
+
+let x= {};
+
+x["A"] = 1;
+x["B"] = 1;
+x["A"] = 2;
+
+
+
+console.log(x); // {A: 2, B: 1}
+
+
+solution:
+
+
+let arr= ["A","B","A","A","C","B"];
+
+let obj={};
+
+for(let i=0;i<arr.length;i++)
+{
+
+obj[arr[i]] = 1;
+
+}
+
+
+console.log(obj);
+
+
+final solution:
+
+
+let arr= ["A","B","A","A","C","B"];
+
+let obj={};
+
+for(let i=0;i<arr.length;i++)
+{
+
+
+if(obj[arr[i]] === undefined){
+
+obj[arr[i]] = 1;
+
+}
+else{
+obj[arr[i]] = obj[arr[i]] +1 ;
+
+}
+
+}
+
+
+console.log(obj);
+
+
+
+
+Q/- print the frequency of each elements inside an String:
+
+example:
+
+let str= "Masai";
+
+output:
+
+M 1
+a 2
+s 1
+i 1
+
+***************************************************************************************
+
+Array of Objects:
+=================
+
+single student object:
+---------------------
+
+let student = {roll: 100, name: "Ram", address: "Delhi", marks: 800};
+
+console.log(student);
+
+
+5 students objects: array of 5 student object.
+------------------- 
+
+
+
+let students = [
+
+{roll: 101, name: "Ram", address: "Delhi", marks: 800},
+{roll: 102, name: "Ravi", address: "Indore", marks: 700},
+{roll: 103, name: "Dinesh", address: "Bhopal", marks: 600},
+{roll: 104, name: "Vinay", address: "Mumbai", marks: 820},
+{roll: 105, name: "Sunil", address: "Pune", marks: 900}
+
+];
+
+
+
+console.log(students.length); //5
+console.log(students);
+console.log(students[1]); //{roll: 102, name: "Ravi", address: "Indore", marks: 700}
+
+
+
+for(let i=0;i<students.length;i++)
+{
+
+	//getting a single student object.
+
+	let student = students[i];
+
+	console.log("Roll is :",student.roll);
+	console.log("Name is :",student.name);
+	console.log("Address is :",student.address);
+	console.log("Marks is :",student.marks);
+
+		
+	console.log("============================");
+
+
+}
+
+
+//OR
+
+
+
+    
+for(let i=0;i<students.length;i++)
+{
+    
+	let student = students[i];
+    
+        for(let k in student)
+        {
+            console.log(k,"  ",student[k]);
+        }
+        
+        console.log("============================");
+    
+}
+    
+    
+
+adding a new Student object inside the above list of Students(array of students):
+================================================================================
+
+
+students.push({roll: 108, name: "Manoj", address: "patna", marks: 720});
+
+//or
+
+
+let newStudent = {roll: 110, name: "Varun", address: "Bhopal", marks: 710};
+students.push(newStudent);
+
+
+
+Assignment:
+-----------
+
+Say we have following arrays:
+
+let subjects = ["English", "Hindi", "Physics", "Chemistry", "Maths"]
+let marks = [67, 76, 77, 66, 89]
+
+create a function that accept both arrays as parameter and return an object in which element of first array are keys and elements of second array are values.
+
+Expected output:
+
+{
+	'English': 67,
+	'Hindi': 76,
+	'Physics': 77,
+	'Chemistry': 66,
+	'Maths': 89
+}
+
+Solution:
+----------
+
+
+function getObject(sub, mk) {
+  //Empty object
+  let obj = {};
+
+  //iterate on each element of the array
+  for (let i = 0; i < sub.length; i++) {
+
+    //adding one entry inside the object
+    obj[sub[i]] = mk[i];
+  }
+
+  return obj;
+}
+
+
+
+
+
+
+
+function foo() {
+
+  let subjects = ['English', 'Hindi', 'Physics', 'Chemistry', 'Maths']
+  let marks = [67, 76, 77, 66, 89]
+
+  let object = getObject(subjects, marks);
+
+  console.log(object);
+}
+
+//calling the function
+foo();
+
+Output:
+
+{'English': 67, 'Hindi': 76, 'Physics': 77, 'Chemistry': 66, 'Maths': 89}
+
+
+
+
+
+Assignment:
+------------
+
+let names = ["Ajay", 'Chandan', 'Pravin', 'Sanjay'];
+let ages = [17, 18, 19, 20];
+let marks = [67, 0, 45, null];
+let states = ['UP', 'MP', 'AP', 'HP'];
+
+
+
+
+Create a function that converts above arrays to array of objects.
+
+
+expected output:
+
+[
+	{ name: "Ajay", age: 17, marks: 67, state: "UP"},
+	{ name: "Chandan", age: 18, marks: 0, state: "MP"},
+	{ name: "Pravin", age: 19, marks: 45, state: "AP"},
+	{ name: "Sanjay", age: 20, marks: null, state: "HP"}
+]
+
+
+
+function getObjects(names, ages, marks, states) {
+
+  //create an empty array to contain objects
+  let objArr = [];
+
+  //Iterate over each element of the array one by one
+  for (let i = 0; i < names.length; i++) 
+  {
+	
+    //create a new empty object
+    let newObj = {};
+
+    //add key and value to the objects
+    newObj.name = names[i];
+    newObj.age = ages[i];
+    newObj.marks = marks[i];
+    newObj.state = states[i];
+
+    //add this object to array
+    objArr.push(newObj);
+  }
+
+  return objArr;
+}
+
+
+
+function getResult() 
+{
+
+  let names = ["Ajay", 'Chandan', 'Pravin', 'Sanjay'];
+  let ages = [17, 18, 19, 20];
+  let marks = [67, 0, 45, null];
+  let states = ['UP', 'MP', 'AP', 'HP'];
+
+  let objects = getObjects(names, ages, marks, states);
+  
+  console.log(objects);
+
+}
+
+
+//calling the getResult() function
+getResult();
+
+
+
+Output
+[
+  { name: 'Ajay', age: 17, marks: 67, state: 'UP' },
+  { name: 'Chandan', age: 18, marks: 0, state: 'MP' },
+  { name: 'Pravin', age: 19, marks: 45, state: 'AP' },
+  { name: 'Sanjay', age: 20, marks: null, state: 'HP' }
+
+]
+
+
+
+Creating function for an Object:
+=================================
+
+syntax:
+
+
+let obj-name = {
+
+key: value,
+key: value,
+function-name: function(parameter-list)
+		{
+			// body of the function
+		},
+
+key: value
+
+
+};
+
+
+
+
+
+--here function-name will be one of the key of the object.
+
+example:
+
+
+let student = {
+
+name: "Ramesh",
+age: 25,
+address: "delhi",
+display: function(){
+
+		console.log("Welcome, this is the display function");
+	},
+smoking: false
+};
+
+
+console.log(student);
+console.log(student.name);
+student.display(); // calling the display function.
+
+
+Note: if a function is defined inside an object, it is called as a method of that object.
+
+--we can define any number of local variables inside the function of an object. and we can access the local variables inside that function directly.
+
+--but inorder to access the properties of object inside the function of that object, we need to make use of 'this' keyword.
+
+--'this' keyword represents the current object.
+
+example:
+
+
+let student = {
+
+name: "Ramesh",  // object variable or instance variable
+age: 25,              
+address: "delhi",  
+display: function(){
+	
+		let x=20; //local variables
+		let y=30; //local variables
+		console.log("Welcome, this is the display function");
+		console.log("The value of x and y is ",x,y); //local variables are accessable directly
+		//console.log("The value of name and age is ",name,age); //object or instance variables are not accessable
+									 //directly
+
+		console.log("The value of name and age is ",this.name,this.age);
+		
+
+	},
+smoking: false
+};
+
+
+
+student.display();
+
+
+
+example2:
+---------
+
+let student = {
+
+name: 'Anuj',
+age: 20,
+display: function(){
+	//console.log("Name: " + name + " Age: " + age); Error
+	console.log("Name: " + this.name + " Age: " + this.age);
+	}
+}
+
+student.display();
+
+
+
+Output
+
+Name: Anuj Age: 20
+
+
+
+
+
+Note: Data present inside an object is called the state of that object, and functions/methods presents inside the object is called behaviour of that object.
+
+
+
+
+
+
+
+example3:
+
+
+
+let song = {
+
+
+title: "Wande Mataram",
+artist: "Lata",
+
+play: function()
+	{
+	console.log(this.artist+" is Singing :"+this.title);
+	}
+
+};
+
+
+song.play();
+
+song.title = "Jai Ho";
+song.artist = "Sukhwindar";
+
+song.play();
+
+
+
+
+
+example4:
+----------
+
+
+let simpleInterest = {
+  
+principleAmount: 1000,
+interestRate: 8.0,
+timePeriod: 2.0,
+  
+calculate: function(panelty) 
+           {
+              let si = (this.principleAmount * this.interestRate * this.timePeriod / 100) + panelty;
+              console.log("Simple interest amount with panelty is " + si);
+           }
+}
+
+
+
+
+
+simpleInterest.calculate(0);
+simpleInterest.calculate(10);
+
+Output
+
+Simple interest amount with panelty is 160
+Simple interest amount with panelty is 170
+
+
+simplateInterest.principleAmount = 2000;
+simpleInterest.calculate(10);
+
+
+
+
+
+
+
+Assignment:
+-----------
+
+Create an object student
+first key: name
+second key: age
+third key: marksheet (its an object that has marks of 3 subjects english, hindi & math)
+add a method to the object that print following output
+The average marks of <name> whose age is <age> is: <average marks>
+
+
+
+Solution:
+---------
+
+ 
+
+let student = {
+
+name: "ABC",
+age: 19,
+
+marksheet: {
+             english: 43,
+             hindi: 44,
+             math: 45
+            },
+
+average: function() 
+         {
+            let sum = this.marksheet.english + this.marksheet.hindi + this.marksheet.math;
+            let avg = sum / 3;
+          //console.log("The average marks of " + this.name + " whose age is " + this.age + " is " + avg);
+            console.log(`The average marks of ${this.name} whose age is ${this.age} is ${avg}`);
+          }
+
+
+}
+
+
+
+
+student.average();
+
+
+
+
+Q/- write an object with the following properties:
+
+name
+age
+email
+mobile
+hobbies: 3 hobbie
+
+--define a function inside this object which print all the details..
+
+
+
+
+
+
+
+Assignment:
+-----------
+
+Create an object that contains product details: name, price(in INR), discount(in %), gst(in %)
+create a function that is to return selling price of the product
+
+Solution:
+---------
+
+
+let product = {
+
+name: "PQR",
+price: 800,
+discount: 10,
+gst: 2.5,
+
+calculate: function(){
+		let sellingPrice = this.price + (this.gst * this.price / 100) - (this.discount * this.price / 100);
+		return sellingPrice;
+	     }
+}
+
+let sp = product.calculate();
+console.log("the selling price is " + sp);
+
+
+//or
+
+console.log("the selling price is " + product.calculate());
+
+
+Output:
+the selling price is 740
+
+
+
+
+
+
+
+
+
+
+Assignment: create an Account object with the following properties:
+
+accountNo, name, balance
+
+and with following 2 functionalities:
+
+withdraw, checkBalance
+
+
+
+let account = {
+
+
+accountNo: 43232,
+name: "Ramesh",
+balance: 50000,
+
+withdraw: function(amount){
+		
+		if(amount <= this.balance)
+		{
+			this.balance = this.balance - amount;
+			console.log("Amount withdwran: please collect the cash", amount);
+		}
+		else
+		{
+			console.log("Insufficient balance");
+		}
+
+	  },
+
+checkBalance: function(){
+
+			console.log("Your Balance is:",this.balance);
+		}
+
+}
+
+
+
+
+
+//calling the function:
+
+//account.withdraw(80000); //Insufficient balance
+
+
+account.withdraw(40000);
+
+account.checkBalance();
+
+
+
+
+Task: Add deposit functionality to the above object.
+
+
+
+Assignment2:
+-----------
+WAP to create a collage object haiving an empty list of students, define a functionality inside this object which should be able to take roll, name, address and marks as a parameter, using these parameter create a student object and add that object inside the list of students.
+
+--print the list of students.
+
+
+
+ 
+var collage = {
+
+
+students: [],
+
+addStudent: function(r, n, a, m){
+
+		let student= {};//empty object
+
+		student.roll = r;
+		student.name = n;
+		student.address = a;
+		student.marks=m;
+
+		this.students.push(student);
+
+	},
+
+print: function(){
+
+		for(let i=0;i<this.students.length;i++)
+		{
+			let student =  this.students[i];
+
+			console.log("Roll is: ",student.roll);
+			console.log("Name is: ",student.name);
+			console.log("Address is: ",student.address);
+			console.log("Marks is: ",student.marks);
+			consoe.log("=======================");
+
+		}		
+
+	}
+
+
+}
+
+
+
+console.log(collage.students);// []
+
+collage.addStudent(100,"Dinesh","Indore",500);
+collage.addStudent(101,"Sumit","Pune",520);
+collage.addStudent(102,"Manoj","Mumbai",600);
+collage.addStudent(103,"Mukesh","Delhi",700);
+
+
+console.log(collage.students);
+
+
+
+Q/- add a function inside the above collage object to print each student details in descriptive manner:
+
+like:
+
+Roll is 100
+Name is Dinesh
+Address is Indore
+Marks is 500
+================
+Roll is 101
+Name is Sumit
+Address is Pune
+Marks is 520
+==============
+--
+--
+
+
+
+
+
+
+Assignment3:
+-----------
+
+
+Create an array of five objects such that each object contains information about the product that has properties like name, price, rating. 
+
+now perform following action:
+
+1. Add new product to array
+2. find the average price of the array; using function
+3. Print product details that has minimum & maximum price & add remark to them as "price touches on the lowest or the highest"; using function
+4. Reduce price of all products by 10% whose rating is below 3 & add remark to each product "Best price"; using function
+5. Delete all products whose rating is between 0.0 and 2.9; using function
+
+
+
+
+let products = [
+
+    {name: "ABC", price: 4500, rating: 4.5},
+    {name: "PQR", price: 1300, rating: 5.0},
+    {name: "XYZ", price: 2300, rating: 4.0},
+    {name: "PYT", price: 3000, rating: 3.5},
+    {name: "LMN", price: 6700, rating: 2.5}
+
+  ];
+
+
+
+
+//function to add new product
+function addNewProduct(product)
+{
+
+	products.push(product);
+        console.log("New Product is addedd");
+}
+
+
+//addNewProduct({name: "TYU", price: 2398, rating: 3.0});
+
+let newProduct = {name: "TYU", price: 2398, rating: 3.0};
+addNewProduct(newProduct);
+
+
+
+
+console.log(products);
+
+
+
+//function to return the avg price of all the products
+
+function averagePrice(prs){
+
+  //code to computer average price
+
+  var sum = 0;
+
+  for(let i = 0; i < prs.length; i++)
+  {
+    sum = sum + prs[i].price;
+  }
+
+  let avg = sum/prs.length;
+  return avg;
+
+  //return sum/prs.length;
+  
+
+}
+
+
+let avgPrice=  averagePrice(products);
+console.log("The Average price of all the products is:",avgPrice);
+
+
+
+
+
+
+
+//function to get min and max price product
+
+function minMaxPrice(prs){
+
+  //code to find product with minimum price and add remark
+
+  let minPriceProduct = prs[0];
+  let maxPriceProduct = prs[0];
+
+  for(let i = 1; i < products.length; i++)
+  {
+  
+    if(minPriceProduct.price > products[i].price)
+    {
+      minPriceProduct = products[i];
+    }
+
+    if(maxPriceProduct.price < products[i].price)
+    {
+      maxPriceProduct = products[i];
+    }
+
+  }
+
+
+  //adding remark propertry to the object  
+  minPriceProduct.remark = "price touches on the lowest price";
+  maxPriceProduct.remark = "price touches on the highest price";
+
+
+   let productList = [];
+   productList.push(minPriceProduct);
+   productList.push(maxPriceProduct);
+
+
+   return productList;
+
+}
+
+
+let result = minMaxPrice(products);
+
+console.log(result);
+
+
+// function to reduce the price of all the product whose rating is less than 3.0
+
+function reducePrice(products)
+{
+
+  for(let i = 0; i < products.length; i++)
+  {
+    if(products[i].rating < 3.0)
+    {
+      products[i].price = products[i].price * 0.9;
+      products[i].remark = "Best Price";
+    }
+  }
+}
+
+
+//calling the function
+reducePrice(products);
+
+console.log(products);

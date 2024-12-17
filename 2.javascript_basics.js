@@ -1,3 +1,5 @@
+let largeNum=212432152342235n;
+console.log(largeNum);
 const t=true;
 const f=false;
 console.log(t && t);
