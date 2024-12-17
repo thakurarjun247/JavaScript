@@ -59,6 +59,12 @@ console.log(number*anotherNumber);
             !==	not equal value or not equal type
 */
 //Adding two numbers, will return the sum, but adding a number and a string will return a concatenated string:
-console.log(typeof(10)); //number
+console.log(typeof(10));
+ //number
+
+ let a=[1,2,3,4,5,6,7];
+ a.forEach(element => console.log(element));
+
+
 
 

@@ -49,7 +49,12 @@
             }
             function calculate(){
                 let input=document.getElementById("result").innerHTML;
-                document.getElementById("result").innerHTML=eval(input);
+                if(input=="" || input==null)
+                  {
+                    alert("enter something");            
+                  } 
+                  else 
+                   document.getElementById("result").innerHTML=eval(input);
             }
             // function clickme(){
             //     document.getElementById("result").innerHTML="button clicked."
