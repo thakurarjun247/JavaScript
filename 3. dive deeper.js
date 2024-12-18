@@ -49,6 +49,18 @@ for (item in a)
 for (item of a) 
 { console.log(item * item); }
 
+let o={
+    "name" : "maa",
+    "place": "dewas",
+    "date": 29,
+    "wannago": true
+}
+
+console.log(o["name"]);
+console.log(o.name);
+
+
+
 
 
 
