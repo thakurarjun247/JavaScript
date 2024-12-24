@@ -1,5 +1,10 @@
-let largeNum=212432152342235n;
-console.log(largeNum);
+let a=[1,2,3,4,5,6,7];
+a.forEach(item => console.log(item) );
+a.filter(item => item%3==0).forEach(item=>console.log(item*item));
+let cubes = a.map(arrayElement=>arrayElement*arrayElement*arrayElement);
+
+console.log("cubes:"+cubes);
+
 const t=true;
 const f=false;
 console.log(t && t);
@@ -62,8 +67,15 @@ console.log(number*anotherNumber);
 console.log(typeof(10));
  //number
 
- let a=[1,2,3,4,5,6,7];
+
  a.forEach(element => console.log(element));
+ for(let i=0;i<a.length;i++){
+    a[i]*=2;
+ }
+a.filter(item => item%2==1)
+
+console.log(typeof(2.3));
+console.log(typeof(true));
 
 
 
