@@ -1,8 +1,56 @@
-let a=[1,2,3,4,5,6,7];
-a.forEach(item => console.log(item) );
-a.filter(item => item%3==0).forEach(item=>console.log(item*item));
-let cubes = a.map(arrayElement=>arrayElement*arrayElement*arrayElement);
+let user = {
 
+
+   "name": "Ram",
+  
+   "hobbies": ["coding", "playing"],
+   married: false,
+   age: 26,
+   address: "delhi",
+   gender: "male"
+   
+   };
+
+let stringFormat = JSON.stringify(user);
+console.log(stringFormat);
+
+console.log(JSON.parse(stringFormat));
+
+
+let loop=0;
+for(loop=0;loop<3;loop++){
+   switchloop(loop);
+   console.log("for");
+   
+}
+while(loop<5){
+   switchloop(loop);
+   console.log("while");
+   loop++;
+}
+function switchloop(loop){
+switch (loop){
+   case 1: console.log("one"); break;
+   case 2: console.log("two"); break;
+   default: case 1: console.log("default"); 
+}
+}
+
+
+   let plant={};
+plant.height=6;
+
+console.log("see..");
+//console.log(user[hobbies[0]]);   
+console.log(user.hobbies[0]);
+console.log(user["age"]);
+console.log(user.age);
+
+console.log();
+   let a=[1,2,3,4,5,6,7];
+   a.forEach(item => console.log(item) );
+   a.filter(item => item%3==0).forEach(item=>console.log(item*item));
+   let cubes = a.map(arrayElement=>arrayElement*arrayElement*arrayElement);
 console.log("cubes:"+cubes);
 
 const t=true;
