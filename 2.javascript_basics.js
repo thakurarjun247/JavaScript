@@ -1,3 +1,28 @@
+let a=[1,2,3,4,5,6,7];
+let doubleOfA=[];
+for(let i=0;i<a.length;i++)
+   console.log(a[i]);
+a.forEach(arrayElement => console.log(arrayElement));
+//map
+for(let i=0;i<a.length;i++)
+   doubleOfA.push(2*a[i]);
+let doubleOfAUsingMap=a.map(item=>2*item);
+let multiplesOfThree=a.filter(item=>item%3==0);
+let newArray=[ 3,6,5,10,43,15];
+//print sum of cubes of the items which are multiples of 5
+let finalArray=newArray
+   .filter(item => item%5==0)
+   .map(item => item*item*item);
+console.log(finalArray);
+
+
+// let sum=0;
+// finalArray.forEach(item=>sum+item);
+
+//Math.pow(item,3);
+   
+
+
 let user = {
 
 
@@ -47,7 +72,7 @@ console.log(user["age"]);
 console.log(user.age);
 
 console.log();
-   let a=[1,2,3,4,5,6,7];
+
    a.forEach(item => console.log(item) );
    a.filter(item => item%3==0).forEach(item=>console.log(item*item));
    let cubes = a.map(arrayElement=>arrayElement*arrayElement*arrayElement);
