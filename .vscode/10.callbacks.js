@@ -4,9 +4,9 @@ function functionThatAcceptsAnotherFunction(argument){
 }
 
 
-function functionPassedAsArgument(){
+function callback(){
     console.log("functionPassedAsArgument...");
     
 }
 
-functionThatAcceptsAnotherFunction(functionPassedAsArgument);
+functionThatAcceptsAnotherFunction(callback);

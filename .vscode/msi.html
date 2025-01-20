@@ -2,153 +2,377 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Panel</title>
 
-
-
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
 </head>
 
 <body>
-	<html>
+    <html>
 
-	<head>
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <head>
+        <title></title>
 
-	
-	</head>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
 
-	<body>
-		<div id="container">
-			<div class="whole">
-				<div class="type">
-					<p>JS</p>
-				</div>
-				<div class="plan">
+        <style>
+            body {
+                font-family: 'Open Sans';
+                font-style: condensed;
+                background: #d9d6da;
+                /* Old browsers */
+                background: -moz-radial-gradient(center, ellipse cover, #5b2072 0%, #5d1566 50%, #251a41 100%);
+                /* FF3.6+ */
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #5b2072), color-stop(50%, #5d1566), color-stop(100%, #251a41));
+                /* Chrome,Safari4+ */
+                background: -webkit-radial-gradient(center, ellipse cover, #5b2072 0%, #5d1566 50%, #251a41 100%);
+                /* Chrome10+,Safari5.1+ */
+                background: -o-radial-gradient(center, ellipse cover, #5b2072 0%, #5d1566 50%, #251a41 100%);
+                /* Opera 12+ */
+                background: -ms-radial-gradient(center, ellipse cover, #5b2072 0%, #5d1566 50%, #251a41 100%);
+                /* IE10+ */
+                background: radial-gradient(ellipse at center, #5b2072 0%, #5d1566 50%, #251a41 100%);
+                /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5b2072', endColorstr='#251a41', GradientType=1);
+                /* IE6-9 fallback on horizontal gradient */
+            }
+
+            a {
+                font-size: 18px;
+                font-family: 'Open Sans';
+                color: white;
+                text-decoration: none;
+
+            }
+
+            input:focus,
+            textarea:focus,
+            select:focus {
+                border: 1px solid #fafafa;
+                -webkit-box-shadow: 0 0 6px #007eff;
+                -moz-box-shadow: 0 0 5px #007eff;
+                box-shadow: 0 0 5px #007eff;
+                outline: none;
+            }
+
+            sup {
+
+                font-size: 40px;
+            }
+
+            ul {
+                list-style: none;
+                font-size: 15px;
+                font-family: 'Open Sans';
+                color: #9095aa;
+                padding: 0px;
+                margin: 0px;
 
 
-					<div class="content">
-						<ul>
-                            <li><a href="https://drive.google.com/file/d/1PBA_dbsFtXigrZGhJ6YDk_SzSHfy8C-u/view?usp=drive_link">Syllabus</a></li>
-							
-							
-							<li><a href="https://drive.google.com/drive/folders/1-zcG1vmUtydYkOXvW3VG32CNx8iVbzuD
+            }
+
+
+            li {
+                border-bottom: 1px solid #494a5a;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+                height: 52px;
+                line-height: 52px;
+            }
+
+
+            #container {
+                width: 100%;
+                text-align: center;
+            }
+
+            .whole {
+                display: inline-block;
+
+            }
+
+
+
+            .type {
+                width: 300px;
+                border-radius: 5px 5px 0px 0px;
+                background-color: #eac80d;
+                height: 62px;
+                border-bottom: 3px solid #bfa30c;
+
+            }
+
+            .type p {
+                font-family: 'Open Sans';
+                font-weight: 800;
+                font-size: 29px;
+
+                color: white;
+                text-align: center;
+                padding-top: 10px;
+
+
+
+            }
+
+            .plan {
+                width: 300px;
+                background-color: #2b2937;
+                border-radius: 0px 0px 5px 5px;
+                font-family: 'Open Sans';
+                font-style: condensed;
+                font-size: 90px;
+                color: white;
+                text-align: center;
+
+
+            }
+
+            .standard {
+                background-color: #1abc9c;
+                border-bottom: 3px solid #18937b;
+            }
+
+            .ultimate {
+                background-color: #5d6a9a;
+                border-bottom: 3px solid #474f6f;
+            }
+
+
+
+
+
+            .header {
+                border-bottom: 1px solid #494a5a;
+                padding-bottom: 39px;
+
+
+            }
+
+            .header span {
+                font-size: 32px;
+
+
+            }
+
+            .month {
+                font-size: 14px;
+                color: #575757;
+                padding: 0px;
+                margin: -10px;
+            }
+
+            .price {
+                height: 80px;
+            }
+
+            .cart {
+
+                color: white;
+                position: relative;
+                top: 16px;
+
+            }
+
+            .bottom {}
+
+            .content {
+                align-items: center;
+            }
+
+            .login_c {
+                width: 500px;
+                background-color: #2b2937;
+                height: 300px;
+                margin: 0 auto;
+                margin-top: 40px;
+                border-radius: 5px;
+
+            }
+
+            .login_c input {
+                width: 350px;
+                height: 40px;
+                border: 1px solid #494a5a;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 10px;
+
+            }
+
+
+            .login {
+                background-color: #BC4B1A;
+                border-bottom: 3px solid #7C3618;
+                width: 100%;
+
+            }
+
+            .top {
+                margin-top: 35px;
+            }
+
+            .nodisplay {
+                opacity: 0.1;
+            }
+
+            .selected {
+                background-color: #1F1B36;
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div class="whole">
+                <div class="type">
+                    <p>JS</p>
+                </div>
+                <div class="plan">
+
+
+                    <div class="content">
+                        <ul>
+                            <li><a
+                                    href="https://drive.google.com/file/d/1PBA_dbsFtXigrZGhJ6YDk_SzSHfy8C-u/view?usp=drive_link">Syllabus</a>
+                            </li>
+
+
+                            <li><a href="https://drive.google.com/drive/folders/1-zcG1vmUtydYkOXvW3VG32CNx8iVbzuD
                                 ">WIP</a></li>
-							<li><a href="https://drive.google.com/drive/folders/1FigzyCbMwk6v3DwDh5k__QKCvcI1oh59?usp=drive_link">Students</a></li>
-							
-
-						</ul>
-
-					</div>
+                            <li><a
+                                    href="https://drive.google.com/drive/folders/1FigzyCbMwk6v3DwDh5k__QKCvcI1oh59?usp=drive_link">Students</a>
+                            </li>
 
 
-				</div>
-			</div>
-			<div class="whole">
-				<div class="type standard">
-					<p>Organizer</p>
-				</div>
-				<div class="plan">
+                        </ul>
+
+                    </div>
 
 
-					<div class="content">
-						<ul>
-							<li><a href="https://docs.google.com/spreadsheets/d/1vBzz-cxqJYfUTASkMW_1BfaHEskR8Or4u0YHF18Zaiw/edit?gid=0#gid=0">Tracker</a></li>
-							<li><a href="https://pwhr.darwinbox.in/">Darwinbox</a></li>
-							<li><a href="">LMS</a>
-							</li>
-												</ul>
-					</div>
+                </div>
+            </div>
+            <!--organizer-->
+            <div class="whole">
+                <div class="type">
+                    <p>C
+                    </p>
+                </div>
+                <div class="plan">
 
-				</div>
-			</div>
 
-			<div class="whole ">
-				<div class="type ultimate">
-					<p>Goolge</p>
-				</div>
-				<div class="plan">
+                    <div class="content">
+                        <ul>
 
-					<div class="content">
-						<ul>
-                            <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
-                            <li><a href="https://mail.google.com/chat/u/0/">Gchat</a></li>
-                            <li><a href="https://calendar.google.com/">Calendar</a></li>
-                            
-						</ul>
-					</div>
+                            <li><a
+                                    href="https://docs.google.com/spreadsheets/d/1vBzz-cxqJYfUTASkMW_1BfaHEskR8Or4u0YHF18Zaiw/edit?gid=0#gid=0">Tracker</a>
+                            </li>
+                            <li><a href="https://www.onlinegdb.com/myfiles">C Online Compiler</a></li>
 
-				</div>
-			</div>
-		</div>
+                        </ul>
+                    </div>
 
-		<div id="container">
-			<div class="whole ">
-				<div class="type">
-					<p>AI</p>
-				</div>
-				<div class="plan">
+                </div>
+            </div>
+            <div class="whole ">
+                <div class="type ultimate">
+                    <p>AI</p>
+                </div>
+                <div class="plan">
 
-					<div class="content">
-						<ul>
+                    <div class="content">
+                        <ul>
                             <li><a href="https://chat.openai.com/chat">ChatGPT</a></li>
                             <li><a href="https://gemini.google.com/">Gemini</a></li>
-                            
-						</ul>
-					</div>
 
-				</div>
-			</div>
-			<div class="whole">
-				<div class="type standard">
-					<p>C
-					</p>
-				</div>
-				<div class="plan">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
 
 
-					<div class="content">
-						<ul>
+        </div>
 
-                            <li><a href="https://docs.google.com/spreadsheets/d/1vBzz-cxqJYfUTASkMW_1BfaHEskR8Or4u0YHF18Zaiw/edit?gid=0#gid=0">Tracker</a></li>
-                            <li><a href="https://www.onlinegdb.com/myfiles">C Online Compiler</a></li>
-                          
-						</ul>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="whole ">
-				<div class="type ultimate">
-					<p>More</p>
-				</div>
-				<div class="plan">
+        <div id="container">
 
 
-					<div class="content">
-						<ul>
-							<li><a
-									href="https://docs.google.com/spreadsheets/d/1pUJLD8p0zILviRL1pdwLxFj5hT06CcpVqprAXXj_z7w/edit?gid=1282264441#gid=1282264441">Time Table
-									</a></li>
-							<li><a
-									href="https://docs.google.com/spreadsheets/d/1bblTLobAxHh18Xn-sGovzXig7pRRKywMkwMlPHVMIWk/edit?gid=608364732#gid=608364732">Syllabus</a>
-							</li>
-						</ul>
-					</div>
+            <div class="whole ">
+                <div class="type ultimate">
+                    <p>Goolge</p>
+                </div>
+                <div class="plan">
 
-				</div>
-			</div>
-		</div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
+                            <li><a href="https://mail.google.com/chat/u/0/">Gchat</a></li>
+                            <li><a href="https://calendar.google.com/"><img width="30px" src="data:image/png;base64,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"/></a></li>
 
-		<!--Uncomment the following to have further scale this -->
-		<!--
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!--C-->
+
+            <div class="whole">
+                <div class="type standard">
+                    <p>Organizer</p>
+                </div>
+                <div class="plan">
+
+
+                    <div class="content">
+                        <ul>
+                            <!--							<li><a href="https://docs.google.com/spreadsheets/d/1vBzz-cxqJYfUTASkMW_1BfaHEskR8Or4u0YHF18Zaiw/edit?gid=0#gid=0">Tracker</a></li>
+-->
+                            <li><a href="https://pwhr.darwinbox.in/">Darwinbox</a></li>
+                            <li><a href="">LMS</a>
+                            </li>
+                            <li><a
+                                    href="https://docs.google.com/spreadsheets/d/1pUJLD8p0zILviRL1pdwLxFj5hT06CcpVqprAXXj_z7w/edit?gid=1282264441#gid=1282264441">Time
+                                    Table
+                                </a></li>
+                            <li><a
+                                    href="https://docs.google.com/spreadsheets/d/1bblTLobAxHh18Xn-sGovzXig7pRRKywMkwMlPHVMIWk/edit?gid=608364732#gid=608364732">Syllabus</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="whole ">
+                <div class="type ultimate">
+                    <p>My ToDo</p>
+                </div>
+                <div class="plan">
+
+
+                    <div class="content">
+                        <ul>
+                            <li><a
+                                href="https://docs.google.com/spreadsheets/d/1iF_c4_sNfopax4dO8z4oh5HEpFKSld9x_bCM0PBjOzI/edit?gid=730125535&usp=gmail">Main</a>
+                        </li>
+
+                        <li><a href="https://docs.google.com/spreadsheets/d/11rXXXyilKKI_jTF0q9P15ASVsBkSnOYaYzVpmmylY4Y/edit?gid=228135086#gid=228135086">CEE Sheet</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1cFXwjcGmRbYx9TZ6SDQYia_xF6E87SBl?usp=sharing">CEE Drive</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Uncomment the following to have further scale this -->
+        <!--
 		<div id="container">
 			<div class="whole">
 				<div class="type">
@@ -222,10 +446,10 @@
 
 		-->
 
-	</body>
+    </body>
 
-	</html>
-	
+    </html>
+
 </body>
 
 </html>
