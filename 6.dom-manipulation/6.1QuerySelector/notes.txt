@@ -1,0 +1,31 @@
+|--------------- -----|-----------------------------------------|------------------------------------------------
+| Feature             |   document.getElementById("id")         | document.querySelector("#id")              |
+|--------------- -----|-----------------------------------------|-------------------------------------------------|
+| Selector Type       | Only id (direct string without #)       | Any valid CSS selector (e.g., #id, .class, tag) |
+| Syntax              | Requires just the id name (no #)        | Requires CSS selector syntax (e.g., "#id")    |
+| Performance         | Faster (direct lookup for id)           | Slightly slower (parses all DOM for CSS rules)  |
+| Flexibility         | Limited to selecting elements by id     | Can select by class, tag, attribute, or pseudo-classes |
+| Return Value        | The element with the given id or null   | First matching element or null if not found   |
+| Browser Support     | Universal (supported since IE5)         | Modern (introduced in IE8 and later)            |
+| Usage Context       | When working exclusively with ids       | When advanced or complex selectors are needed  |
+
+    Choose getElementById("id"):
+        When you’re selecting an element by id only and want optimal performance.
+        Example: Selecting a single id element directly (e.g., "header").
+
+    Choose querySelector("#id"):
+        When you need CSS-like flexibility for selecting elements.
+        Example: Selecting nested or complex elements (e.g., "#header .title").
+Here’s a simplified table with only the most commonly used and important selection types, along with examples:
+
+|---------------------|--------------------------------------------|-------------------------------------------|------------------------------------------------|
+| Selection Type      | querySelector Syntax                       | querySelectorAll Syntax                   | Example                                      |
+|---------------------|--------------------------------------------|-------------------------------------------|------------------------------------------------|
+| By ID               | document.querySelector("#id")              | N/A                                       | document.querySelector("#header")            |
+| By Class            | document.querySelector(".class")           | document.querySelectorAll(".class")       | document.querySelector(".box")               |
+| By Tag Name         | document.querySelector("tag")              | document.querySelectorAll("tag")          | document.querySelector("div")                |
+| By Attribute        | document.querySelector("[attr]")           | document.querySelectorAll("[attr]")       | document.querySelector("[data-id]")          |
+| By Attribute Value  | document.querySelector("[attr='value']")    | document.querySelectorAll("[attr='value']")| document.querySelector("[type='button']")    |
+| By Descendant       | document.querySelector("parent child")     | document.querySelectorAll("parent child")  | document.querySelector("ul li")              |
+| By Group            | document.querySelector("tag1, tag2")       | document.querySelectorAll("tag1, tag2")    | document.querySelector("div, span")          |
+|---------------------|--------------------------------------------|----------------------------------------------|------------------------------------------------|

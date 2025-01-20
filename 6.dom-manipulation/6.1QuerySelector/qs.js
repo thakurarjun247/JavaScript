@@ -24,6 +24,10 @@ function qsByClassAll(){
 }
 
 function selectByType(){
-    const buttons=document.querySelectorAll("[type='text']");
-    buttons.forEach(button=> button.value="final text value");
+
+    
+    const textBoxes=document.querySelectorAll("[type='text']");
+    textBoxes.forEach(textBox=> textBox.value="final text value");
 }
+
+//https://docs.google.com/document/d/1vVftGjWizypoeXWN2U4n2Mwgx5CwwFdU5hBnrqjMTpk/edit?tab=t.0
