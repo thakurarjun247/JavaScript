@@ -12,3 +12,10 @@ function callback() {
 }
 
 functionThatAcceptsAnotherFunction(callback);
+
+
+
+
+
+
+
