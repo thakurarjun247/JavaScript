@@ -8,8 +8,6 @@ function functionThatAcceptsAnotherFunction(callback) {
 }
 
 function callback() {
-    localStorage.setItem("name", "value");
-    const name=localStorage.getItem("name");
     console.log("call back...");
 }
 
