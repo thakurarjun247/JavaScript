@@ -9,21 +9,29 @@
         function addItem() {
             const listItem = document.createElement("li");
             const deleteButton = document.createElement("button");
+            const itemPriority=document.createElement('input');
+            itemPriority.value=document.getElementById("priority").value;
+
             deleteButton.textContent = "delete";
             const newItemText = document.getElementById("textarea").value;
             listItem.textContent = newItemText;
             listItem.appendChild(deleteButton);
+            listItem.appendChild(itemPriority);
+
             document.getElementById("list").appendChild(listItem);
 
             deleteButton.onclick = function () {
                 listItem.remove();
             }
             document.getElementById("textarea").value = "";
+            document.getElementById("priority").value = "";
         }
 
 
     </script>
     <textarea id="textarea"></textarea>
+    <br>
+    <input type="text" id="priority"></input>
     <br>
     <button onclick="addItem()">add item</button>
     <br>
