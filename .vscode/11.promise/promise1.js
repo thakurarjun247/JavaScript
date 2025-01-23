@@ -8,12 +8,12 @@ console.log(doubleUsingAnonymousLambda(5));
 
 
 
-const executorFunction=(resolve, reject)=>{
+const executorFunction=(xyz, abc)=>{
     let isFulfilled=true;
     if(isFulfilled)
-        resolve("it's resolved");
+        xyz("it's resolved");
     else
-        reject("it's rejected")
+        abc("it's rejected")
 
 }
 let myPromise= new Promise(executorFunction);

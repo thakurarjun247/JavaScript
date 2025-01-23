@@ -1,0 +1,23 @@
+<html>
+    <head><title>todo</title></head>
+    <body>
+        <script>
+            function addItem(){
+                
+                const listItem=document.createElement("li");
+                const newItemText=document.getElementById("textarea").value;
+                listItem.textContent=newItemText;
+                document.getElementById("list").appendChild(listItem);
+                document.getElementById("textarea").value="";
+
+                //complete this code
+            }
+        </script>
+        <textarea id="textarea"></textarea>
+        <button onclick="addItem()">add item</button>
+       
+        <ol id="list">
+            
+        </ol>
+    </body>
+</html>
