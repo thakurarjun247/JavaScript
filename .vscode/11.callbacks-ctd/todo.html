@@ -13,7 +13,7 @@
             itemPriority.value=document.getElementById("priority").value;
 
             deleteButton.textContent = "delete";
-            const newItemText = document.getElementById("textarea").value;
+            const newItemText = document.getElementById("task").value;
             listItem.textContent = newItemText;
             listItem.appendChild(deleteButton);
             listItem.appendChild(itemPriority);
@@ -23,13 +23,13 @@
             deleteButton.onclick = function () {
                 listItem.remove();
             }
-            document.getElementById("textarea").value = "";
+            document.getElementById("task").value = "";
             document.getElementById("priority").value = "";
         }
 
 
     </script>
-    <textarea id="textarea"></textarea>
+    <input type="text" id="task"></task>
     <br>
     <input type="text" id="priority"></input>
     <br>
