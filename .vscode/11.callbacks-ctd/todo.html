@@ -1,23 +1,35 @@
 <html>
-    <head><title>todo</title></head>
-    <body>
-        <script>
-            function addItem(){
-                
-                const listItem=document.createElement("li");
-                const newItemText=document.getElementById("textarea").value;
-                listItem.textContent=newItemText;
-                document.getElementById("list").appendChild(listItem);
-                document.getElementById("textarea").value="";
 
-                //complete this code
+<head>
+    <title>todo</title>
+</head>
+
+<body>
+    <script>
+        function addItem() {
+            const listItem = document.createElement("li");
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "delete";
+            const newItemText = document.getElementById("textarea").value;
+            listItem.textContent = newItemText;
+            listItem.appendChild(deleteButton);
+            document.getElementById("list").appendChild(listItem);
+
+            deleteButton.onclick = function () {
+                listItem.remove();
             }
-        </script>
-        <textarea id="textarea"></textarea>
-        <button onclick="addItem()">add item</button>
-       
-        <ol id="list">
-            
-        </ol>
-    </body>
+            document.getElementById("textarea").value = "";
+        }
+
+
+    </script>
+    <textarea id="textarea"></textarea>
+    <br>
+    <button onclick="addItem()">add item</button>
+    <br>
+    <ol id="list">
+
+    </ol>
+</body>
+
 </html>
