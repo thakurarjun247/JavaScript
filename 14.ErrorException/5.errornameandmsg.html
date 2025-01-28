@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="name">
+  <p id="msg"></p>
+
+<script>
+  const str=`{"name:"Yuvan"}`;
+
+try {
+  const object=JSON.parse(str);
+  document.querySelector("#msg").innerHTML = "pased well.. ";
+  
+}
+catch(err) {
+  document.getElementById("name").innerHTML = err.name;
+  document.querySelector("#msg").innerHTML = err.message;
+  
+}
+</script>
+
+</body>
+</html>

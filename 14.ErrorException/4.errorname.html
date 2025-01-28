@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">
+  <p id="msg"></p>
+
+<script>
+let num = 1;
+try {
+  num.toUpperCase();
+}
+catch(err) {
+  document.querySelector("#msg").innerHTML = err.message;
+  document.getElementById("demo").innerHTML = err.name;
+}
+</script>
+
+</body>
+</html>
