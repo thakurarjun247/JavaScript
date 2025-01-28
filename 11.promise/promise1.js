@@ -1,19 +1,16 @@
-function doubleIt(x){
+-function doubleIt(x){
     return 2*x;
 }
 const doubleUsingAnonymousLambda=(x)=>2*x;
 console.log(doubleIt(2));
 console.log(doubleUsingAnonymousLambda(5));
 
-
-
-
-const executorFunction=(xyz, abc)=>{
+const executorFunction=(resolve, reject)=>{
     let isFulfilled=true;
     if(isFulfilled)
-        xyz("it's resolved");
+        resolve("it's resolved");
     else
-        abc("it's rejected")
+        reject("it's rejected")
 
 }
 let myPromise= new Promise(executorFunction);

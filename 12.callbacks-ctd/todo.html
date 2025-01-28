@@ -10,8 +10,9 @@
             const listItem = document.createElement("li");
             const deleteButton = document.createElement("button");
             const itemPriority=document.createElement('input');
-            itemPriority.value=document.getElementById("priority").value;
 
+            //set values
+            itemPriority.value=document.getElementById("priority").value;
             deleteButton.textContent = "delete";
             const newItemText = document.getElementById("task").value;
             listItem.textContent = newItemText;
@@ -35,9 +36,9 @@
     <br>
     <button onclick="addItem()">add item</button>
     <br>
-    <ol id="list">
+    <ul id="list">
 
-    </ol>
+    </ul>
 </body>
 
 </html>

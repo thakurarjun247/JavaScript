@@ -1,0 +1,29 @@
+<html>
+    <head><title>todo</title></head>
+    <body>
+        <script>
+            
+            function addItem(){
+                const listItem=document.createElement('li');
+                const deleteButton=document.createElement('button');
+                deleteButton.textContent="delete";
+                listItem.textContent=document.getElementById("task").value;
+               const list= document.getElementById("list");
+               list.appendChild(listItem);
+               listItem.appendChild(deleteButton);
+            
+               deleteButton.onclick=function(){
+               listItem.remove();
+                }
+
+            }
+        </script>
+        
+      <input type="text" id="task">
+      <button onclick="addItem()">add item</button> 
+      <br>
+      <ol id="list">
+           
+      </ol>
+    </body>
+</html>
