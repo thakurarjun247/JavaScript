@@ -1,6 +1,6 @@
-# JavaScript Projects by thakurarjun247
+# JavaScript Repository
 
-Welcome to my JavaScript repository! This repository contains various JavaScript projects, code snippets, and implementations that I have worked on, covering fundamental concepts, API integrations, and advanced functionalities.
+Welcome to the JavaScript repository! This repository contains various JavaScript projects, code snippets, and implementations that I have worked on, covering fundamental concepts, API integrations, and advanced functionalities.
 
 ## Table of Contents
 - [Overview](#overview)
