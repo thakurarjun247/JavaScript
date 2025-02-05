@@ -1,4 +1,8 @@
 let num = 1;
-console.log("hi".toUpperCase());
-num.toUpperCase();
-
+console.log("hi".toUpperCase());//HI
+try {
+    num.toUpperCase();//try catch
+ 
+} catch (error) {
+    
+}
