@@ -1,5 +1,6 @@
 //prerequisite:
 // 1. run this on terminal: npm install node-fetch
+//npm i node-fetch
 // 2. create a file package.json with the content: 
 //{  "type": "module"}
 
@@ -9,14 +10,15 @@
 // Import node-fetch using ES module syntax
 import fetch from "node-fetch";
 
+
 // API for get requests
 let fetchResponse = fetch(
-    "https://jsonplaceholder.typicode.com/todos/1");
+    "https://jsonplaceholder.typicode.com/todos/2");
 
 //more here: https://jsonplaceholder.typicode.com/posts/1
 
 // FetchRes is the promise to resolve
-// it by using.then() method
+// it by using.then() method    
 fetchResponse
     .then(response => response.json())
     .then(response => console.log(response))
