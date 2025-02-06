@@ -1,0 +1,9 @@
+weather 
+https://wttr.in/
+
+quotes
+https://zenquotes.io/api/random
+
+https://quotes-api-self.vercel.app/quote
+
+
