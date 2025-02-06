@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <input type="text" id="text">
+        <br>
+        <button onclick="showQuote()" >  show quote</button>
+        <button onclick="clearQuote()" >  clear</button>
+
+        <script>
+            function showQuote(){
+                document.getElementById("text").value="hello";
+            }
+            function clearQuote(){
+                document.getElementById("text").value="";
+                document.getElementById("text").innerHTML="";
+            }
+        </script>
+    </body>
+</html>

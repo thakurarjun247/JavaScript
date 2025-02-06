@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Click Button</title>
+</head>
+<body>
+    <input type="text" id="textbox" readonly>
+    <button id="myButton" onclick="printHello()">Click Me</button>
+
+    <script>
+        let x=0;
+        function printHello() {
+            document.getElementById("textbox").value = "Hello"+ (x++);
+        }
+        function clear(){
+            document.getElementById("textbox").value = "";
+
+        }
+
+        function ideal(){
+           
+
+        }
+        function autoClick() {
+            document.getElementById("myButton").click();
+        }
+        setInterval(clear, 500);
+        setInterval(autoClick, 1000);
+    </script>
+</body>
+</html>
