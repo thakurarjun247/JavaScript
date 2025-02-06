@@ -1,22 +1,26 @@
-<html>
-    <body>
-        <input type="text" id="text">
-        <br>
-        <button onclick="showQuote()" >  show quote</button>
-        <button onclick="clearQuote()" >  clear</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="quote"></p>
+    <button id="get" onclick="getData()">get</button>
 
-        <script>
-            let counter=0;
-            function showQuote(){
-                document.getElementById("text").value="hello ";
-            }
-            function clearQuote(){
-                document.getElementById("text").value="";
-                document.getElementById("text").innerHTML="";
-            }
+    <script>
+        let quotebox = document.querySelector("#quote")
+        let btn = document.querySelector("#get")
+        let url = 'https://quotes-api-self.vercel.app/quote';
+        async function getData() {
+            let response = await fetch(url);
+            let data = await response.json();
+            // console.log(data);
+            quotebox.innerHTML = data['quote'];
+        } 
 
-            setInterval(showQuote, 1000);
-            setInterval(clearQuote,2000);
-        </script>
-    </body>
+        
+    </script>
+</body>
 </html>
