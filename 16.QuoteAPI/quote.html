@@ -6,13 +6,17 @@
         <button onclick="clearQuote()" >  clear</button>
 
         <script>
+            let counter=0;
             function showQuote(){
-                document.getElementById("text").value="hello";
+                document.getElementById("text").value="hello ";
             }
             function clearQuote(){
                 document.getElementById("text").value="";
                 document.getElementById("text").innerHTML="";
             }
+
+            setInterval(showQuote, 1000);
+            setInterval(clearQuote,2000);
         </script>
     </body>
 </html>
