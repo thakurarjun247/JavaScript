@@ -3,7 +3,7 @@
 import fetch from "node-fetch";
 
 async function getWeatherData() {
-  const city = "London"; // Hardcoded city, get it from user
+  const city = "dewas"; // Hardcoded city, get it from user
 
   try {
     const response = await fetch(`https://wttr.in/${city}?format=j1`);
@@ -25,4 +25,4 @@ async function getWeatherData() {
   }
 }
 
-getWeatherData(); // Call the function directly
+getWeatherData(); 
