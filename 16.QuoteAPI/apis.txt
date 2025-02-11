@@ -1,5 +1,8 @@
-weather 
+weather api
 https://wttr.in/
+
+weather api in json format
+https://wttr.in/%3Cbengaluru%3E?format=j1
 
 quotes
 https://zenquotes.io/api/random
