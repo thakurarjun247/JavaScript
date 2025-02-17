@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prevent Default Link Navigation</title>
+</head>
+<body>
+<a href="https://www.pwioi.com" id="myLink">Click to go to Example.com</a>
+<script>
+    let link = document.getElementById("myLink");
+    link.addEventListener("click", function(event) {
+        //alert("Sorry, the link's default navigation is blocked!");
+        //event.preventDefault(); // Prevent navigation to the link's target
+    });
+</script>
